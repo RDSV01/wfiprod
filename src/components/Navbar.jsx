@@ -1,7 +1,6 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
-import { slide as Menu } from "react-burger-menu";
+import { elastic as Menu } from "react-burger-menu";
 
 const Navbar = () => {
   return (

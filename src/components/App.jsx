@@ -1,8 +1,8 @@
 import "../App.css";
-import Home from "../pages/home";
-import Videos from "../pages/videos";
-import Photos from "../pages/photos";
-import Contact from "../pages/contact";
+import Home from "../pages/Home";
+import Videos from "../pages/Videos";
+import Photos from "../pages/Photos";
+import Contact from "../pages/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

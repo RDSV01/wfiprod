@@ -1,8 +1,13 @@
-:root{
+:root {
   background-color: #242424;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
+body {
   margin: 0;
   padding: 0;
+  background-image: url("src/assets/shape.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  width: 100%;
 }
