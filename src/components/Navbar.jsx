@@ -3,40 +3,29 @@ import Logo from "./Logo";
 import { elastic as Menu } from "react-burger-menu";
 
 const Navbar = () => {
+  const navLinks = [
+    { to: "/", label: "Accueil" },
+    { to: "/videos", label: "Vidéos" },
+    { to: "/photos", label: "Photos" },
+    { to: "/contact", label: "Contact" },
+  ];
+
+  const renderNavLinks = () => {
+    return navLinks.map((link, index) => (
+      <NavLink key={index} to={link.to}>
+        <li>{link.label}</li>
+      </NavLink>
+    ));
+  };
+
   return (
     <div className="navbar">
-      <Menu right>
-        <NavLink to="/">
-          <li>Accueil</li>
-        </NavLink>
-        <NavLink to="/videos">
-          <li>Vidéos</li>
-        </NavLink>
-        <NavLink to="/photos">
-          <li>Photos</li>
-        </NavLink>
-        <NavLink to="/contact">
-          <li>Contact</li>
-        </NavLink>
-      </Menu>
+      <Menu right>{renderNavLinks()}</Menu>
       <div className="logonavbar">
         <Logo />
       </div>
       <div className="linknavbar">
-        <ul>
-          <NavLink to="/">
-            <li>Accueil</li>
-          </NavLink>
-          <NavLink to="/videos">
-            <li>Vidéos</li>
-          </NavLink>
-          <NavLink to="/photos">
-            <li>Photos</li>
-          </NavLink>
-          <NavLink to="/contact">
-            <li>Contact</li>
-          </NavLink>
-        </ul>
+        <ul>{renderNavLinks()}</ul>
       </div>
     </div>
   );
