@@ -1,4 +1,4 @@
-import "../App.css";
+import "../assets/css/App.css";
 import Home from "../pages/Home";
 import Videos from "../pages/Videos";
 import Photos from "../pages/Photos";

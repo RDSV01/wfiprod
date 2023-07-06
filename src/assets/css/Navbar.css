@@ -1,0 +1,136 @@
+.navbar {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  height: 55px;
+}
+.navbar .logonavbar {
+  position: absolute;
+  align-self: center;
+  left: 0;
+}
+.navbar .linknavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  color: #fffffe;
+  list-style-type: none;
+  font-size: larger;
+  padding: 8px;
+  border-radius: 8px;
+  transition: ease-in-out 0.3s;
+}
+.navbar li:hover {
+  background-color: #4b4b4b60;
+  padding: 8px;
+}
+.linknavbar a.active {
+  background-color: #4b4b4b60;
+  border-radius: 8px;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar .logo h1 {
+  position: relative;
+  left: 0;
+  margin: 0;
+  margin-left: 24px;
+  color: #ffffff;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #a69f88;
+  height: 15px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: 250px !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0;
+  left: -25px !important;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 28px;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+/*Media Queries téléphone*/
+
+@media (max-width: 767px) {
+  .bm-burger-button {
+    display: block;
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 25px;
+    top: 14px;
+  }
+  .navbar .linknavbar {
+    display: none;
+  }
+}

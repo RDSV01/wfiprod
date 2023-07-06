@@ -1,4 +1,6 @@
 import Tilt from "react-parallax-tilt";
+import { Link } from "react-router-dom";
+import "../assets/css/Card.css"
 
 const Card = () => {
   return (
@@ -21,8 +23,12 @@ const Card = () => {
             <h2>Photographe / Vidéaste</h2>
             <p>Découvrir mes projets</p>
             <div className="doubleButton">
-              <button>Photo</button>
-              <button>Vidéo</button>
+              <Link to={"/photos"}>
+                <button>Photo</button>
+              </Link>
+              <Link to={"/videos"}>
+                <button>Vidéo</button>
+              </Link>
             </div>
           </div>
         </div>
