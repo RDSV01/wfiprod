@@ -29,6 +29,10 @@
 .navbar li {
   color: #a69f88;
   list-style-type: none;
+  font-size: larger;
+}
+.navbar li:hover {
+  border-bottom: 4px solid rgb(255, 216, 216, 0);
 }
 .navbar a {
   text-decoration: none;
@@ -141,9 +145,31 @@
   color: rgba(255, 255, 255, 0.9);
 }
 .card h3 {
+  display: inline-flex;
   font-size: 32px;
   color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
+.card h3 span:nth-child(even) {
+  overflow: hidden;
+  color: #fff;
+  transition: ease-in-out 0.5s;
+  letter-spacing: -1em;
+}
+.card h3:hover span:nth-child(even) {
+  letter-spacing: 0;
+  cursor: pointer;
+}
+.card h3:hover span:nth-child(2) {
+  transition-delay: 0s;
+}
+.card h3:hover span:nth-child(4) {
+  transition-delay: 0.1s;
+}
+.card h3:hover span:nth-child(6) {
+  transition-delay: 0.1s;
+}
+
 .card p {
   color: rgba(255, 255, 255, 0.7);
 }

@@ -7,7 +7,17 @@ const Card = () => {
         <div className="card">
           <img src="src/assets/pp.jpg"></img>
           <div>
-            <h3>WfiProd</h3>
+            <pre>
+              <h3>
+                <span>W</span>
+                <span>e </span>
+                <span>f</span>
+                <span>ilm </span>
+                <span>i</span>
+                <span>t </span>
+                Prod
+              </h3>
+            </pre>
             <h2>Photographe / Vidéaste</h2>
             <p>Découvrir mes projets</p>
             <div className="doubleButton">
