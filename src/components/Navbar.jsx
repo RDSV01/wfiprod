@@ -22,11 +22,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Menu right>{renderNavLinks()}</Menu>
-      <div className="logonavbar">
-        <Logo />
-      </div>
-      <div className="linknavbar">
-        <ul>{renderNavLinks()}</ul>
+      <div className="navdesktop">
+        <div className="logonavbar">
+          <Logo />
+        </div>
+        <div className="linknavbar">
+          <ul>{renderNavLinks()}</ul>
+        </div>
       </div>
     </div>
   );
