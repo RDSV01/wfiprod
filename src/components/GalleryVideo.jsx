@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../assets/css/GalleryVideo.css";
 import "../assets/css/Loader.css";
-
-const parallaxData = [
-  {
-    start: 0,
-    end: 500,
-    properties: [
-      {
-        startValue: 1,
-        endValue: 2,
-        property: "scale",
-      },
-    ],
-  },
-];
 
 const GalleryVideo = () => {
   const apiKey = "AIzaSyAeIaqpDrH5tYTftRSISnJjEtS3sD0K-mA";
@@ -61,7 +47,7 @@ const GalleryVideo = () => {
                 frameBorder="0"
                 allowFullScreen
               ></iframe>
-              <p>{video.snippet.title}</p>
+              <h3>{video.snippet.title}</h3>
             </div>
           </div>
         ))
