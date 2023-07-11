@@ -20,7 +20,7 @@ const Card = () => {
                 Prod
               </h3>
             </pre>
-            <h2>Photographe / Vidéasteee</h2>
+            <h2>Photographe / Vidéaste</h2>
             <p>Découvrir mes projets</p>
             <div className="doubleButton">
               <Link to={"/videos"}>
