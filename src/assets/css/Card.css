@@ -76,7 +76,6 @@
   cursor: pointer;
 }
 
-
 @media (max-width: 720px) {
   .card {
     flex-direction: column;

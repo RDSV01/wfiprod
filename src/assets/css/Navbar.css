@@ -1,13 +1,12 @@
 .navbar {
   display: flex;
-  gap: 25px;
   justify-content: center;
   height: 55px;
   position: sticky;
   top: 0;
   z-index: 9999;
 }
-.navdesktop{
+.navdesktop {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -15,13 +14,15 @@
 }
 .navbar .logonavbar {
   position: absolute;
+  z-index: 1;
   align-self: center;
-  left: 0;
+  left: 15px;
 }
 .navbar .linknavbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
 }
 .navbar ul {
   display: flex;
@@ -146,5 +147,8 @@
   }
   .navbar .linknavbar {
     display: none;
+  }
+  .navbar div:first-child {
+    display: block;
   }
 }

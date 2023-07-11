@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "atropos": "^2.0.2",
     "axios": "^1.4.0",
     "gltf-pipeline": "^4.1.0",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.5",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.151",
