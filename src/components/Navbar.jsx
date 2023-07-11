@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "../assets/css/Navbar.css";
 import Logo from "./Logo";
 import { elastic as Menu } from "react-burger-menu";
+import { Fade } from "react-awesome-reveal";
 
 const Navbar = () => {
   const navLinks = [
