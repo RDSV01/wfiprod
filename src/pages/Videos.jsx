@@ -1,14 +1,17 @@
 import GalleryVideo from "../components/GalleryVideo";
 import Navbar from "../components/Navbar";
-import { Bounce } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
+
+
+
 
 const videos = () => {
   return (
     <div>
       <Navbar />
-      <Bounce>
-        <GalleryVideo />
-      </Bounce>
+      <Slide>
+        <GalleryVideo/>
+      </Slide>
     </div>
   );
 };
