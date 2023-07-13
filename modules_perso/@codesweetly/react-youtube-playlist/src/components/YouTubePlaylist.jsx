@@ -1,30 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import FsLightbox from 'fslightbox-react';
-import Loader from './Loader';
-import getPlaylistData from '../getPlaylistData';
-import '../css/YouTubePlaylist.css';
+import React, { useState, useEffect } from "react";
+import FsLightbox from "fslightbox-react";
+import Loader from "./Loader";
+import getPlaylistData from "../getPlaylistData";
+import "../css/YouTubePlaylist.css";
 
 function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
   const [urls, setUrls] = useState([]);
   const [playlistDataArray, setPlaylistDataArray] = useState(null);
   const [isNotFetchingData, setIsNotFetchingData] = useState(true);
-  const [uniqueNameParsed] = useState(uniqueName.toLowerCase().replace(/\s/g, "-"));
-  const [lightboxController, setLightboxController] = useState({ toggler: false, slide: 1 });
+  const [uniqueNameParsed] = useState(
+    uniqueName.toLowerCase().replace(/\s/g, "-")
+  );
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
   let youtubeVideoFiguresArray = null;
 
   function openLightboxOnSlide(number) {
-    setLightboxController({ toggler: !lightboxController.toggler, slide: number });
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number,
+    });
   }
 
   function saveSubsequentPlaylistAndURLDataArrayToState() {
     const lastGalleryItem = playlistDataArray[playlistDataArray.length - 1];
     getPlaylistData(apiKey, playlistId, lastGalleryItem.nextPageToken)
-      .then(newData => {
-        const newUrls = newData.map(data => `https://www.youtube.com/watch?v=${data.resourceId.videoId}`);
+      .then((newData) => {
+        const newUrls = newData.map(
+          (data) => `https://www.youtube.com/watch?v=${data.resourceId.videoId}`
+        );
         setUrls([...urls, ...newUrls]);
         setPlaylistDataArray([...playlistDataArray, ...newData]);
       })
-      .catch(e => console.error(`Error getting next page playlist data: ${e}`));
+      .catch((e) =>
+        console.error(`Error getting next page playlist data: ${e}`)
+      );
     setIsNotFetchingData(true);
   }
 
@@ -39,9 +51,11 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
       const totalGalleryScrollableHeight = galleryHeightIsGreaterThanViewport
         ? galleryHeight - viewportHeight + heightAboveGallery
         : 0;
-      const remainingGalleryScrollableHeight = totalGalleryScrollableHeight - lengthScrolled;
+      const remainingGalleryScrollableHeight =
+        totalGalleryScrollableHeight - lengthScrolled;
       const scrolledToGalleryBottom = remainingGalleryScrollableHeight <= 0;
-      const moreVideosAvailable = playlistDataArray.length < playlistDataArray[0].totalVideosAvailable;
+      const moreVideosAvailable =
+        playlistDataArray.length < playlistDataArray[0].totalVideosAvailable;
 
       if (scrolledToGalleryBottom && moreVideosAvailable && isNotFetchingData) {
         setIsNotFetchingData(false);
@@ -54,18 +68,17 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
     youtubeVideoFiguresArray = playlistDataArray.map((item, index) => {
       if (item.title !== "Deleted video") {
         return (
-            <figure className="youtube-video-figure">
-              <div key={item.id} className="youtube-video-wrapper">
+          <figure className="youtube-video-figure">
+            <div key={item.id} className="youtube-video-wrapper">
               <img
                 alt={`Video ${index + 1} of ${playlistDataArray.length}`}
-                src={item.thumbnails.high.url}
+                src={item.thumbnails.medium.url}
                 className="youtube-video-image"
                 onClick={() => openLightboxOnSlide(index + 1)}
               />
-              </div>
-              <figcaption>{item.title}</figcaption>
-            </figure>
-          
+            </div>
+            <figcaption>{item.title}</figcaption>
+          </figure>
         );
       } else {
         return "";
@@ -76,12 +89,15 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
   useEffect(() => {
     function saveInitialPlaylistAndURLDataArrayToState() {
       getPlaylistData(apiKey, playlistId)
-        .then(items => {
-          const urls = items.map(item => `https://www.youtube.com/watch?v=${item.resourceId.videoId}`);
+        .then((items) => {
+          const urls = items.map(
+            (item) =>
+              `https://www.youtube.com/watch?v=${item.resourceId.videoId}`
+          );
           setUrls(urls);
           setPlaylistDataArray(items);
         })
-        .catch(e => console.error(`Error getting playlist data: ${e}`));
+        .catch((e) => console.error(`Error getting playlist data: ${e}`));
     }
 
     saveInitialPlaylistAndURLDataArrayToState();

@@ -10,12 +10,8 @@
 
 .youtube-video-image {
   width: 100%;
-  max-width: 278px;
   cursor: pointer;
   height: auto;
-    object-fit: cover;
-    margin-top: -26px;
-    margin-bottom: -30px;
     
 }
 
@@ -25,11 +21,6 @@
   font-weight: 600;
   color: inherit;
 }
-.youtube-video-wrapper {
-  width: fit-content;
-  height: fit-content;
-  overflow: hidden;
-}
 
 @media only screen and (min-width: 600px) {
   
@@ -38,10 +29,3 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .youtube-video-image{
-    max-width: none;
-    margin-top: -45px;
-    margin-bottom: -49px;
-  }  
-}
