@@ -1,0 +1,44 @@
+{
+  "name": "@codesweetly/react-youtube-playlist",
+  "version": "1.0.7",
+  "description": "An easy-to-use and responsive React component for displaying YouTube playlists on a web app.",
+  "homepage": "https://codesweetly.com/react-youtube-playlist",
+  "main": "./src/components/YouTubePlaylist.jsx",
+  "author": "Oluwatobi Sofela (https://www.codesweetly.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/components/ -d src/components/",
+    "release": "dotenv release-it --"
+  },
+  "keywords": [
+    "react",
+    "youtube",
+    "playlist",
+    "player",
+    "gallery",
+    "video",
+    "lightbox",
+    "docusaurus"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesweetly/react-youtube-playlist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "dotenv-cli": "^7.2.1",
+    "husky": "^8.0.3",
+    "release-it": "^15.10.3"
+  },
+  "peerDependencies": {
+    "fslightbox-react": "^1.7.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0"
+  }
+}
