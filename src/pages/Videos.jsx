@@ -7,6 +7,7 @@ const videos = () => {
   return (
     <div>
       <Navbar />
+      <div className="divApiVid">
       <Zoom>
         <YouTubePlaylist
           apiKey="AIzaSyAeIaqpDrH5tYTftRSISnJjEtS3sD0K-mA"
@@ -14,6 +15,7 @@ const videos = () => {
           uniqueName="apivideos"
         />
       </Zoom>
+      </div>
     </div>
   );
 };
