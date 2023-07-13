@@ -55,6 +55,7 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
       if (item.title !== "Deleted video") {
         return (
             <figure className="youtube-video-figure">
+              <div className='textandvideos'>
               <div key={item.id} className="youtube-video-wrapper">
               <img
                 alt={`Video ${index + 1} of ${playlistDataArray.length}`}
@@ -63,7 +64,8 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
                 onClick={() => openLightboxOnSlide(index + 1)}
               />
               </div>
-              <figcaption>{item.title}</figcaption>
+              <h3 className='titreVideo'>{item.title}</h3>
+              </div>
             </figure>
           
         );

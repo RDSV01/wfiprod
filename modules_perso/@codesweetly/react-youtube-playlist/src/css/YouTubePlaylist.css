@@ -1,7 +1,10 @@
 .playlist-gallery-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, auto);
   grid-gap: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .youtube-video-figure {
@@ -34,6 +37,10 @@
   height: 100vh !important;
 }
 
+.textandvideos{
+  max-width: 278px;
+}
+
 @media only screen and (min-width: 600px) {
   
   .youtube-video-image + figcaption {
@@ -44,7 +51,7 @@
 @media only screen and (max-width: 500px) {
   .youtube-video-image{
     max-width: none;
-    margin-top: -45px;
+    margin-top: -32px;
     margin-bottom: -49px;
   }  
 }
