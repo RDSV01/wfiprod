@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("src/assets/background-min.webp");
+  background-image: url("src/assets/back.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -27,4 +27,8 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #444444;
+}
+
+::selection{
+  background-color: #A69F88;
 }

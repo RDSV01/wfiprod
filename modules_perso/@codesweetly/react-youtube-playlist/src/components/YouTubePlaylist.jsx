@@ -3,6 +3,7 @@ import FsLightbox from "fslightbox-react";
 import Loader from "./Loader";
 import getPlaylistData from "../getPlaylistData";
 import "../css/YouTubePlaylist.css";
+import Tilt from "react-parallax-tilt";
 
 function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
   const [urls, setUrls] = useState([]);
@@ -68,17 +69,19 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
     youtubeVideoFiguresArray = playlistDataArray.map((item, index) => {
       if (item.title !== "Deleted video") {
         return (
-          <figure className="youtube-video-figure">
-            <div key={item.id} className="youtube-video-wrapper">
-              <img
-                alt={`Video ${index + 1} of ${playlistDataArray.length}`}
-                src={item.thumbnails.medium.url}
-                className="youtube-video-image"
-                onClick={() => openLightboxOnSlide(index + 1)}
-              />
-            </div>
-            <figcaption>{item.title}</figcaption>
-          </figure>
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+            <figure className="youtube-video-figure">
+              <div key={item.id} className="youtube-video-wrapper">
+                <img
+                  alt={`Video ${index + 1} of ${playlistDataArray.length}`}
+                  src={item.thumbnails.medium.url}
+                  className="youtube-video-image"
+                  onClick={() => openLightboxOnSlide(index + 1)}
+                />
+              </div>
+              <h3>{item.title}</h3>
+            </figure>
+          </Tilt>
         );
       } else {
         return "";

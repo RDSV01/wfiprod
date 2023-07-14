@@ -13,7 +13,6 @@
     "@babel/helper-compilation-targets": "^7.22.9",
     "@codesweetly/react-youtube-playlist": "modules_perso/@codesweetly/react-youtube-playlist",
     "@emotion/react": "^11.11.1",
-    "atropos": "^2.0.2",
     "axios": "^1.4.0",
     "gltf-pipeline": "^4.1.0",
     "react": "^18.2.0",

@@ -1,19 +1,31 @@
 .playlist-gallery-div {
   display: grid;
-  grid-template-columns: repeat(4, minmax(240px, 1fr));  grid-gap: 0 2rem;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  grid-gap: 1rem 1rem;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
 }
 
 .youtube-video-figure {
   margin: 0;
 }
+.youtube-video-figure h3{
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px black;
+}
+
 
 .youtube-video-image {
   width: 100%;
   cursor: pointer;
   height: auto;
+  border-radius: 6px;
     
 }
 
@@ -33,7 +45,7 @@
 
 @media only screen and (max-width: 1256px){
   .playlist-gallery-div {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  grid-gap: 0 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
   }
 
 }
