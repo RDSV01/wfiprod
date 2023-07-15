@@ -1,5 +1,4 @@
-import "../assets/css/GalleryVideo.css";
-import "../assets/css/Loader.css";
+import "../styles/GalleryVideo.css";
 import YouTubePlaylist from "@codesweetly/react-youtube-playlist";
 
 const GalleryVideo = () => {

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "../assets/css/FormulaireContact.css";
+import "../styles/FormulaireContact.css";
 import { Bounce, Slide } from "react-awesome-reveal";
 
 const FormulaireContact = () => {
@@ -52,10 +52,16 @@ const FormulaireContact = () => {
           <p>Contactez-moi sur mes réseaux sociaux </p>
           <div className="divLogoReseaux">
             <a href="#">
-              <img className="logoReseaux" src="src/assets/instagram.svg"></img>
+              <img
+                className="logoReseaux"
+                src="src/assets/icones/instagram.svg"
+              ></img>
             </a>
 
-            <img className="logoReseaux" src="src/assets/youtube.svg"></img>
+            <img
+              className="logoReseaux"
+              src="src/assets/icones/youtube.svg"
+            ></img>
           </div>
         </div>
       </Slide>
@@ -72,7 +78,7 @@ const FormulaireContact = () => {
                 <div className="messageValide">
                   <p>Message envoyé avec succès !</p>
                   <button className="closeButton" onClick={closeMessage}>
-                    x
+                    <img src="src/assets/icones/xmark-solid.svg" alt="" />
                   </button>
                 </div>
               </Bounce>

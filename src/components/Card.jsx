@@ -1,13 +1,13 @@
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
-import "../assets/css/Card.css";
+import "../styles/Card.css";
 
 const Card = () => {
   return (
     <div className="bodycard">
       <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} style={{ display: "flex" }}>
         <div className="card">
-          <img src="src/assets/pp.jpg"></img>
+          <img src="src/assets/images/pp.jpg"></img>
           <div>
             <pre>
               <h3>

@@ -1,0 +1,165 @@
+textarea{
+    resize: none;
+    height: 125px;
+    font-family: 'Montserrat', sans-serif;
+}
+.input {
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #21212180;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    transition: all ease 0.1s;
+   }
+   
+   .input:focus {
+    outline-color: white;
+    color: #e8e8e8;
+    box-shadow: 5px 5px #888888;
+   }
+
+   .formulairecontact{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 25px;
+    margin-top: 80px;
+   }
+   form.inputbox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 15px;
+    width: 100%;
+}
+.inputbox h1{
+    color:white;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;
+}
+.inputbox p{
+    color:white;
+    text-align: center;
+    margin-bottom: 26px;
+    text-shadow: 1px 1px 10px black;
+}
+.encartGaucheContact {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 15px;
+}
+.encartGaucheContact h1{
+    color:white;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;
+}
+.encartGaucheContact p{
+    color:white;
+    text-align: center;
+    margin-bottom: 26px;
+    margin-top: 0;
+    text-shadow: 1px 1px 10px black;
+}
+.encartGaucheContact img{
+    display: flex;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(313deg) brightness(101%) contrast(112%);
+    
+}
+.divLogoReseaux{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 25px;
+}
+
+.boutonenvoyer{
+    border: none;
+  outline: none;
+  background-color: #6c5ce7;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #a29bfe;
+  width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.boutonenvoyer:active{
+    transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
+}    
+.divMsgValide {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+.messageValide {
+    display: flex;
+    background-color: #139e46;
+    /* padding: 0px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+}
+.messageValide p{
+    margin: auto;
+}
+button.closeButton {
+    background-color: transparent;
+    border: none;
+    height: 32px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.closeButton img{
+    width: 12px;
+    margin-top: 4px;
+}
+@media (max-width: 924px) {
+    .formulairecontact{
+        flex-direction: column;
+        width: 90%;
+    }
+    form.inputbox {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .encartGaucheContact {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input {
+        width: 90%;
+    }
+    .boutonenvoyer{
+        width: 90%;
+    }
+}

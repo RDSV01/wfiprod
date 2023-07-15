@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Encartheader.css";
+import "../styles/Encartheader.css";
 import { Slide } from "react-awesome-reveal";
 
 const Encartheader = ({ title, paragrpahe }) => {
