@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 import Encartheader from "../components/Encartheader";
 
 const videos = () => {
-  const pageTitle = "Mes projets vidéos";
+  const pageTitle = "Mes projets vidéos 🎥";
   const pageParagraph = (
     <>
       {" "}
