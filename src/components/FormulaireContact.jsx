@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/FormulaireContact.css";
 import { Bounce, Slide } from "react-awesome-reveal";
+import IconesReseaux from "./IconesReseaux";
 
 const FormulaireContact = () => {
   const form = useRef();
@@ -51,17 +52,7 @@ const FormulaireContact = () => {
           <h1>Mes réseaux sociaux</h1>
           <p>Contactez-moi sur mes réseaux sociaux </p>
           <div className="divLogoReseaux">
-            <a href="#">
-              <img
-                className="logoReseaux"
-                src="src/assets/icones/instagram.svg"
-              ></img>
-            </a>
-
-            <img
-              className="logoReseaux"
-              src="src/assets/icones/youtube.svg"
-            ></img>
+            <IconesReseaux />
           </div>
         </div>
       </Slide>

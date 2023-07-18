@@ -5,7 +5,22 @@ import getPlaylistData from "../getPlaylistData";
 import "../css/YouTubePlaylist.css";
 import Tilt from "react-parallax-tilt";
 
+
 function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
+
+  const parallaxData = [
+    {
+      start: 0,
+      end: 500,
+      properties: [
+        {
+          startValue: 1,
+          endValue: 2,
+          property: "scale",
+        },
+      ],
+    },
+  ];
   const [urls, setUrls] = useState([]);
   const [playlistDataArray, setPlaylistDataArray] = useState(null);
   const [isNotFetchingData, setIsNotFetchingData] = useState(true);
@@ -75,6 +90,7 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
                 <img
                   alt={`Video ${index + 1} of ${playlistDataArray.length}`}
                   src={item.thumbnails.medium.url}
+                  
                   className="youtube-video-image"
                   onClick={() => openLightboxOnSlide(index + 1)}
                 />
