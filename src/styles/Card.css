@@ -1,3 +1,7 @@
+pre {
+  margin: 0;
+}
+
 .bodycard {
   display: flex;
   justify-content: center;
@@ -30,6 +34,7 @@
 }
 .card h2 {
   color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
 }
 .card h3 {
   display: inline-flex;
@@ -61,19 +66,62 @@
 
 .card p {
   color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+}
+.doubleButton {
+  display: flex;
+  gap: 16px;
 }
 .card button {
-  border: 0;
-  background: #5448de;
-  color: #f8f8f8;
-  font-family: inherit;
-  padding: 14px 22px;
-  font-size: 16px;
-  border-radius: 40px;
-  margin-right: 16px;
-  margin-bottom: 16px;
-  width: 140px;
+  --color: #d8d0b7;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  width: 119px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card button::before,
+button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+.card button::before {
+  top: -1em;
+  left: -1em;
+}
+.card button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.card button:hover::before,
+button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+.card button:hover {
+  color: rgb(10, 25, 30);
+}
+.card button:active {
+  filter: brightness(0.8);
 }
 
 @media (max-width: 720px) {
@@ -90,5 +138,27 @@
     margin: -100px 0 30px 0;
     width: 100%;
     max-width: 1000px;
+  }
+  .doubleButton {
+    flex-direction: column;
+  }
+  .card h3 span:nth-child(even) {
+    overflow: hidden;
+    color: #fff;
+    transition: ease-in-out 0.5s;
+    letter-spacing: -1em;
+  }
+  .card h3:hover span:nth-child(even) {
+    letter-spacing: -1em;
+    cursor: pointer;
+  }
+  .card h3:hover span:nth-child(2) {
+    transition-delay: 0s;
+  }
+  .card h3:hover span:nth-child(4) {
+    transition-delay: 0.1s;
+  }
+  .card h3:hover span:nth-child(6) {
+    transition-delay: 0.1s;
   }
 }
