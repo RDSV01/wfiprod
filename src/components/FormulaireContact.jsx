@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/FormulaireContact.css";
-import { Bounce, Slide } from "react-awesome-reveal";
+import { Bounce, JackInTheBox } from "react-awesome-reveal";
 
 const FormulaireContact = () => {
   const form = useRef();
@@ -38,7 +38,7 @@ const FormulaireContact = () => {
   };
   return (
     <div className="formulairecontact">
-      <Slide
+      <JackInTheBox
         direction="left"
         style={{
           width: "100%",
@@ -64,10 +64,10 @@ const FormulaireContact = () => {
             ></img>
           </div>
         </div>
-      </Slide>
+      </JackInTheBox>
       <form ref={form} onSubmit={sendEmail} className="inputbox">
-        <Slide direction="right" style={{ textAlign: "center" }}>
-          <h1>Contactez-moi</h1>
+        <JackInTheBox direction="right" style={{ textAlign: "center" }}>
+          <h1>Contactez-moi </h1>
           <p>
             Pour toutes questions n'hésitez pas à me contacter via le formulaire
             ci dessous
@@ -109,7 +109,7 @@ const FormulaireContact = () => {
             value={isSending ? "Envoi en cours..." : "Envoyer"}
             className="boutonenvoyer"
           />
-        </Slide>
+        </JackInTheBox>
       </form>
     </div>
   );
