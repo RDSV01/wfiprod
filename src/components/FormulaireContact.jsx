@@ -51,17 +51,7 @@ const FormulaireContact = () => {
           <h1>Mes réseaux sociaux</h1>
           <p>Contactez-moi sur mes réseaux sociaux </p>
           <div className="divLogoReseaux">
-            <a href="#">
-              <img
-                className="logoReseaux"
-                src="src/assets/icones/instagram.svg"
-              ></img>
-            </a>
-
-            <img
-              className="logoReseaux"
-              src="src/assets/icones/youtube.svg"
-            ></img>
+            <IconesReseaux />
           </div>
         </div>
       </JackInTheBox>
