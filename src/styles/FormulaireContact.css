@@ -51,7 +51,6 @@ textarea{
     color:white;
     text-align: center;
     margin-bottom: 26px;
-    text-shadow: 1px 1px 10px black;
 }
 .encartGaucheContact {
     display: flex;
@@ -123,7 +122,7 @@ textarea{
     /* padding: 0px; */
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 6px;
+    padding-top: 7px;
     padding-bottom: 6px;
     border-radius: 6px;
 }
@@ -139,7 +138,8 @@ button.closeButton {
 }
 .closeButton img{
     width: 12px;
-    margin-top: 4px;
+    margin-top: 3px;
+    filter: invert(100%) sepia(13%) saturate(2%) hue-rotate(66deg) brightness(109%) contrast(100%);
 }
 @media (max-width: 924px) {
     .formulairecontact{

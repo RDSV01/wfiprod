@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/FormulaireContact.css";
 import { Bounce, JackInTheBox } from "react-awesome-reveal";
+import IconesReseaux from "./IconesReseaux";
 
 const FormulaireContact = () => {
   const form = useRef();
