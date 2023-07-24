@@ -35,12 +35,12 @@
   margin: 0;
   padding: 0;
 }
-.navbar ul:hover li {
+/* .navbar ul:hover li {
   filter: blur(1.8px);
 }
 .navbar ul li:hover {
   filter: blur(0px);
-}
+} */
 .navbar li {
   color: #fffffe;
   list-style-type: none;
