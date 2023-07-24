@@ -5,22 +5,7 @@ import getPlaylistData from "../getPlaylistData";
 import "../css/YouTubePlaylist.css";
 import Tilt from "react-parallax-tilt";
 
-
 function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
-
-  const parallaxData = [
-    {
-      start: 0,
-      end: 500,
-      properties: [
-        {
-          startValue: 1,
-          endValue: 2,
-          property: "scale",
-        },
-      ],
-    },
-  ];
   const [urls, setUrls] = useState([]);
   const [playlistDataArray, setPlaylistDataArray] = useState(null);
   const [isNotFetchingData, setIsNotFetchingData] = useState(true);
@@ -84,13 +69,12 @@ function YouTubePlaylist({ apiKey, playlistId, uniqueName }) {
     youtubeVideoFiguresArray = playlistDataArray.map((item, index) => {
       if (item.title !== "Deleted video") {
         return (
-          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} key={item.id}>
             <figure className="youtube-video-figure">
               <div key={item.id} className="youtube-video-wrapper">
                 <img
                   alt={`Video ${index + 1} of ${playlistDataArray.length}`}
                   src={item.thumbnails.medium.url}
-                  
                   className="youtube-video-image"
                   onClick={() => openLightboxOnSlide(index + 1)}
                 />
