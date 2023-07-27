@@ -1,21 +1,40 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "../styles/CarouselPhotos.css";
-import Tilt from "react-parallax-tilt";
 
 const Slider = () => {
   const slideRef = useRef(null);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClickNext = () => {
-    let items = slideRef.current.querySelectorAll(".item");
-    slideRef.current.appendChild(items[0]);
+    if (!isAnimating) {
+      setIsAnimating(true);
+      let items = slideRef.current.querySelectorAll(".item");
+      slideRef.current.appendChild(items[0]);
+      setTimeout(() => setIsAnimating(false), 500); // Set a timeout for animation completion
+    }
   };
 
   const handleClickPrev = () => {
-    let items = slideRef.current.querySelectorAll(".item");
-    slideRef.current.prepend(items[items.length - 1]);
+    if (!isAnimating) {
+      setIsAnimating(true);
+      let items = slideRef.current.querySelectorAll(".item");
+      slideRef.current.prepend(items[items.length - 1]);
+      setTimeout(() => setIsAnimating(false), 500); // Set a timeout for animation completion
+    }
+  };
+
+  const handleScroll = (e) => {
+    if (!isAnimating) {
+      const delta = e.deltaY;
+      if (delta > 0) {
+        handleClickNext();
+      } else if (delta < 0) {
+        handleClickPrev();
+      }
+    }
   };
 
   const data = [
@@ -55,7 +74,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="container" onWheel={handleScroll}>
       <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
       <div id="slide" ref={slideRef}>
         {data.map((item) => (
@@ -65,8 +84,8 @@ const Slider = () => {
             style={{ backgroundImage: `url(${item.imgUrl})` }}
           >
             <div className="content">
-              <div className="name">{item.name}</div>
-              <div className="des">{item.desc}</div>
+              <h1 className="name">{item.name}</h1>
+              <p className="des">{item.desc}</p>
               <button>See more</button>
             </div>
           </div>
