@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "../styles/CarouselPhotos.css";
-import { Zoom } from "react-awesome-reveal";
 
 const Slider = () => {
   const slideRef = useRef(null);
