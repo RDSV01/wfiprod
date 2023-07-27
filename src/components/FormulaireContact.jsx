@@ -8,11 +8,13 @@ const FormulaireContact = () => {
   const form = useRef();
   const [isMessageSent, setIsMessageSent] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     setIsSending(true);
+    setIsError(false);
 
     emailjs
       .sendForm(
@@ -31,6 +33,7 @@ const FormulaireContact = () => {
         (error) => {
           console.log(error.text);
           setIsSending(false);
+          setIsError(true);
         }
       );
   };
@@ -64,6 +67,16 @@ const FormulaireContact = () => {
             ci dessous
           </p>
           <div className="divMsgValide">
+            {isError && (
+              <Bounce>
+                <div className="messageErreur">
+                  <p>Erreur lors de l'envoi du message</p>
+                  <button className="closeButton" onClick={closeMessage}>
+                    <img src="src/assets/icones/xmark-solid.svg" alt="" />
+                  </button>
+                </div>
+              </Bounce>
+            )}
             {isMessageSent && (
               <Bounce>
                 <div className="messageValide">
