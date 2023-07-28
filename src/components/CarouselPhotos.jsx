@@ -41,35 +41,35 @@ const Slider = () => {
     {
       id: 1,
       imgUrl: "https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
-      desc: "Some beautiful roads cannot be discovered without getting loss.",
-      name: "EXPLORE NATURE",
+      desc: "Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.",
+      name: "PROJETS PHOTOS.",
     },
     {
       id: 2,
       imgUrl:
         "https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
-      desc: "Some beautiful roads cannot be discovered without getting loss.",
-      name: "EXPLORE NATURE",
+      desc: "Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.",
+      name: "PROJETS PHOTOS.",
     },
     {
       id: 3,
       imgUrl:
         "https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
-      desc: "Some beautiful roads cannot be discovered without getting loss.",
-      name: "EXPLORE NATURE",
+      desc: "Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.",
+      name: "PROJETS PHOTOS.",
     },
     {
       id: 5,
       imgUrl: "https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
-      desc: "Some beautiful roads cannot be discovered without getting loss.",
-      name: "EXPLORE NATURE",
+      desc: "Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.",
+      name: "PROJETS PHOTOS.",
     },
     {
       id: 6,
       imgUrl:
         "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
-      desc: "Some beautiful roads cannot be discovered without getting loss.",
-      name: "EXPLORE NATURE",
+      desc: "Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.",
+      name: "PROJETS PHOTOS.",
     },
   ];
 
@@ -86,7 +86,7 @@ const Slider = () => {
             <div className="content">
               <h1 className="name">{item.name}</h1>
               <p className="des">{item.desc}</p>
-              <button>See more</button>
+              {/* <button>See more</button> */}
             </div>
           </div>
         ))}

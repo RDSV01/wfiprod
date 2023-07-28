@@ -5,7 +5,7 @@ import Encartheader from "../components/Encartheader";
 import BackgroundVideo from "../components/BackgroundVideo";
 
 const videos = () => {
-  const pageTitle = "Mes projets vidéos 🎥";
+  const pageTitle = "Projets vidéos.";
   const pageParagraph = (
     <>
       {" "}
