@@ -1,14 +1,13 @@
+import BackgroundVideo from "../components/BackgroundVideo";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
-import { Slide } from "react-awesome-reveal";
 
 const Home = () => {
   return (
     <div>
+      <BackgroundVideo />
       <Navbar />
-      <Slide>
-        <Card />
-      </Slide>
+      <Card />
     </div>
   );
 };

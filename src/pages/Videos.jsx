@@ -2,6 +2,7 @@ import GalleryVideo from "../components/GalleryVideo";
 import Navbar from "../components/Navbar";
 import { Slide } from "react-awesome-reveal";
 import Encartheader from "../components/Encartheader";
+import BackgroundVideo from "../components/BackgroundVideo";
 
 const videos = () => {
   const pageTitle = "Mes projets vidéos 🎥";
@@ -21,6 +22,7 @@ const videos = () => {
   );
   return (
     <div className="videos">
+      <BackgroundVideo />
       <Navbar />
       <Encartheader title={pageTitle} paragrpahe={pageParagraph} />
       <Slide delay={100}>
