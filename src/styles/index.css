@@ -5,7 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("src/assets/images/back.jpg");
+  /* background-image: url("src/assets/images/back.jpg"); */
+  background-color: #121212;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -23,12 +24,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #555555;
   border-radius: 20px;
-
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #444444;
 }
 
-::selection{
-  background-color: #A69F88;
+::selection {
+  background-color: #a69f88;
 }
