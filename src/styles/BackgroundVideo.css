@@ -10,4 +10,5 @@
   object-fit: cover;
   top: 0;
   right: 0;
+  filter: grayscale(100%) blur(6px);
 }
